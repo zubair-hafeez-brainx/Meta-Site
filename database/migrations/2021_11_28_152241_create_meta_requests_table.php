@@ -17,7 +17,7 @@ class CreateMetaRequestsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('meta_id');
-            $table->string('url');
+            $table->string('url')->index('url');
             $table->boolean('is_paid');
             $table->float('amount_paid')->nullable();
             $table->timestamps();

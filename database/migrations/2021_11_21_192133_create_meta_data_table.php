@@ -16,7 +16,7 @@ class CreateMetaDataTable extends Migration
         Schema::create('meta_data', function (Blueprint $table) {
             $table->id();
             $table->boolean('is_meta');
-            $table->string('url');
+            $table->string('url')->index('url');
             $table->string('lang')->nullable();
             $table->longText('meta_data');
             $table->timestamps();
